@@ -19,16 +19,17 @@ Manual Setup:
 
 ## How to run the application
 
-First run the nix shell:
+The nix shell already contains commands to run the test and the application:
 
 ```bash
-nix-shell --pure --run 
+nix-shell --pure --run "run && test"
 ```
 
-Then run the application:
+Or manually compile everything:
 
 ```bash
 mkdir cmake-build && cd cmake-build
-cmake -G Ninja ..
-
+cmake -GNinja ..
+./homework
+./homework-tests
 ```
