@@ -1,12 +1,12 @@
 #
 # Usage:
-#   nix-shell --run "runAll"
+#   nix-shell --run test
 #
 
 let
   pkgs = import ./nixpkgs {};
 in pkgs.mkShell {
-  pname = "thinkcell-homework";
+  pname = "interval-map";
   version = "0.1";
 
   buildInputs = with pkgs; [
@@ -23,21 +23,15 @@ in pkgs.mkShell {
       ninja
     }
 
-    run() {
-      build
-      ./homework
-      cd ..
-    }
-
     test() {
       build
-      ./homework-tests
+      ./tests
       cd ..
     }
 
     help() {
       echo ""
-      echo "Welcome to the think cell solution made by Robert Richter 🚀 !"
+      echo "Welcome to the interval map implementation by Robert Richter🚀 !"
       echo ""
       echo "Following commands are available:"
       echo "    - run: Build and run the solution."

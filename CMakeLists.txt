@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(ThinkCellHomework)
+project(IntervalList)
 
 set(
 	CMAKE_CXX_STANDARD 17
@@ -9,19 +9,12 @@ set(
 
 enable_testing()
 
-add_executable(homework
-	src/main.cpp
-	src/data-structure.hpp
-	src/data-structure.cpp
-)
-
-add_executable(homework-tests
+add_executable(tests
 	src/test.cpp
 	src/data-structure.hpp
-	src/data-structure.cpp
 )
 
-target_link_libraries(homework-tests
+target_link_libraries(tests
 	GTest::gtest_main
 )
 
