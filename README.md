@@ -1,4 +1,4 @@
-# Think Cell Application Homework
+# Application Homework
 
 Made by: Robert Richer
 Date: 2024-07-19
@@ -17,6 +17,11 @@ Manual Setup:
 - `gcc 13.2.0`
 - `ninja` or `make`
 
+## Files
+
+- `src/test.cpp`: Test code with Google Test.
+- `src/data-structure.hpp`: The interval map data structure.
+
 ## How to run the application
 
 The nix shell already contains commands to run the test and the application:
@@ -30,6 +35,5 @@ Or manually compile everything:
 ```bash
 mkdir cmake-build && cd cmake-build
 cmake -GNinja ..
-./homework
-./homework-tests
+./tests
 ```
